@@ -1,12 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int gcd(int a, int b) {
-    if (b == 0)
-        return a;
-    return gcd(b, a % b);
-}
-
 string compareFractions(int a, int b, int c, int d) {
     int numerator1 = a * d;
     int numerator2 = c * b;
@@ -30,16 +24,8 @@ int main()
     cin >> a >> b;
     cin >> c >> d;
 
-    int gcdAB = gcd(a, b);
-    int gcdCD = gcd(c, d);
-    a /= gcdAB;
-    b /= gcdAB;
-    c /= gcdCD;
-    d /= gcdCD;
-
     string result = compareFractions(a, b, c, d);
     cout << result;
 
-    return 0;
     return 0;
 }
